@@ -50,7 +50,7 @@ const Home = () => {
     },
     {
       title: 'Sound Off Veterans App',
-      description: 'Sound Off is revolutionizing the way Veterans seek and receive mental health care. Just download the app, confirm your geographic region, and you'll receive an anonymous, permanent username.',
+      description: 'Sound Off is revolutionizing the way Veterans seek and receive mental health care. Just download the app, confirm your geographic region, and you will receive an anonymous, permanent username.',
       link: 'https://sound-off.com/'
     },
     {
