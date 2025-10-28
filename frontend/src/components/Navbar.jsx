@@ -20,9 +20,9 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-actions">
-          <button className="cart-button" aria-label="Cart">
+          <a href="/donate" className="cart-button" aria-label="Donate">
             <ShoppingCart size={20} />
-          </button>
+          </a>
           <button 
             className="mobile-menu-button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
