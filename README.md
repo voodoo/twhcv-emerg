@@ -68,3 +68,68 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Deployment to Vercel
+
+This project is configured for easy deployment to Vercel.
+
+### Prerequisites
+
+- A [Vercel account](https://vercel.com/signup)
+- [Vercel CLI](https://vercel.com/docs/cli) (optional, for command-line deployment)
+
+### Deployment Methods
+
+#### Method 1: Deploy via Vercel Dashboard (Recommended)
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Go to [Vercel Dashboard](https://vercel.com/new)
+3. Import your repository
+4. Vercel will automatically detect the framework and use the configuration in `vercel.json`
+5. Click "Deploy"
+
+#### Method 2: Deploy via Vercel CLI
+
+1. Install Vercel CLI globally:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy from the project root:
+   ```bash
+   vercel
+   ```
+
+4. Follow the prompts to complete the deployment
+
+5. For production deployment:
+   ```bash
+   vercel --prod
+   ```
+
+### Configuration
+
+The project includes:
+- `vercel.json` - Deployment configuration with custom build commands and routing rules
+- `.vercelignore` - Files and directories to exclude from deployment
+
+### Important Notes
+
+- The project uses `--legacy-peer-deps` flag for npm installations due to peer dependency conflicts
+- Build output is generated in the `build` directory
+- The app uses React Router, so all routes are redirected to `index.html` for proper client-side routing
+- Make sure all environment variables are set in the Vercel dashboard under Project Settings → Environment Variables
+
+### Build Verification
+
+Before deploying, verify the build works locally:
+```bash
+npm run build
+```
+
+The build should complete successfully with output in the `build` folder.
